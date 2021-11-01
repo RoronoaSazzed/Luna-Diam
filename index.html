@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Luna Diam</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .text-center {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      h3 {
+        font-size: 28px;
+      }
+
+      .logo {
+        width: 250px;
+        max-width: 100%;
+      }
+
+      .sectionOne {
+        position: relative;
+        min-height: 80vh;
+      }
+
+      .secOne {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 700px;
+        max-width: 100%;
+        aspect-ratio: 1 / 1;
+        padding: 50px;
+        background-image: url(bgs1.svg);
+        background-position: left top;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      .contentFirst {
+        margin-top: 70px;
+      }
+
+      .title {
+        line-height: 56px;
+        font-size: 28px;
+      }
+
+      .secPara {
+        width: 350px;
+        font-size: 16px;
+        line-height: 1.7rem;
+      }
+
+      .secTwo {
+        position: absolute;
+        top: 10vh;
+        right: 10vh;
+        width: 38vw;
+        aspect-ratio: 1 / 1;
+        background-image: url(maxresdefault.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.03),
+          -15px -15px 0px rgba(0, 0, 0, 0.02);
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      }
+
+      .sectionTwo {
+        padding: 75px 30px;
+        min-height: 50vh;
+      }
+
+      .sectionTwo h3 {
+        margin-bottom: 50px;
+      }
+
+      .imageGallery {
+        box-shadow: 56% 44% 52% 48% / 67% 54% 46% 32%;
+        background-color: rgba(0, 0, 0, 0.03);
+      }
+
+      .galleryDiv {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      .imageGallery {
+        width: 20vw;
+        aspect-ratio: 1 / 1;
+        background-image: url(maxresdefault.jpg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: 56% 44% 52% 48% / 67% 54% 46% 32%;
+        box-shadow: 15px 15px 0px 0px rgba(0, 0, 0, 0.11),
+          15px 15px 0px 0px rgba(255, 255, 255, 0.27) inset;
+      }
+
+      .sectionThree {
+        position: relative;
+        min-height: 100vh;
+      }
+
+      .firstRow {
+        display: flex;
+        align-items: flex-start;
+        padding: 50px;
+      }
+
+      .iconBox {
+        padding: 2%;
+        width: 450px;
+        margin: 2%;
+        background-color: rgba(0, 0, 0, 0.01);
+        border: 1px solid rgba(0, 0, 0, 0.03);
+        box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.03);
+      }
+
+      .iconTitle {
+        display: flex;
+        align-items: center;
+      }
+
+      .icon {
+        width: 50px;
+      }
+
+      .iconBoxTitle {
+        padding: 15px;
+      }
+
+      .secThreeFooter {
+        margin-left: auto;
+        width: 40vw;
+        margin-top: -20vh;
+        min-height: 350px;
+        padding: 50px;
+        background-color: rgba(0, 0, 0, 0.03);
+        border-radius: 75% 0% 0% 40% / 100% 41% 2% 0%;
+        box-shadow: 0px -25px 0px 0px rgba(0, 0, 0, 0.02);
+      }
+
+      .checklist {
+        padding: 20px;
+        text-align: right;
+      }
+
+      @media (min-width: 768px) and (max-width: 1024px) {
+        .secTwo {
+          top: 50vh;
+          right: 2vw;
+          transform: translateY(-50%);
+        }
+
+        .imageGallery {
+          box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.11),
+            8px 8px 0px 0px rgba(255, 255, 255, 0.27) inset;
+        }
+
+        .firstRow {
+          padding: 20px;
+        }
+
+        .iconTitle {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .iconBoxTitle {
+          padding: 15px 0px;
+        }
+
+        .secThreeFooter {
+          display: grid;
+          place-items: center;
+          margin-top: 0vh;
+          border-radius: 0;
+          width: 100%;
+          box-shadow: none;
+          background-color: transparent;
+          background-image: url(wave\ footer.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          box-shadow: none;
+        }
+
+        .checklist {
+          text-align: center;
+          padding: 15px;
+        }
+      }
+
+      @media (min-width: 320px) and (max-width: 480px) {
+        .sectionOne {
+          min-height: 0px;
+        }
+
+        .logo {
+          width: 170px;
+        }
+
+        .secPara {
+          width: 70%;
+        }
+
+        .secOne {
+          position: relative;
+          padding: 20px;
+          width: 100%;
+        }
+        .contentFirst {
+          margin-top: 0px;
+        }
+
+        .secTwo {
+          top: 25%;
+          transform: translateY(-50%);
+          right: 5%;
+          width: 40vw;
+          z-index: -2;
+          box-shadow: 8px 8px 0px rgba(255, 255, 255, 0.07) inset,
+            8px 8px 0px rgba(0, 0, 0, 0.11);
+        }
+
+        .imageGallery {
+          width: 45%;
+          margin-bottom: 30px;
+          box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.11),
+            5px 5px 0px 0px rgba(255, 255, 255, 0.27) inset;
+        }
+
+        .sectionThree h2 {
+          padding: 20px;
+        }
+
+        .firstRow {
+          padding: 0px 20px 20px 20px;
+          flex-direction: column;
+        }
+
+        .iconBox {
+          width: 80%;
+          margin: 15px auto;
+        }
+
+        .secThreeFooter {
+          display: grid;
+          place-items: center;
+          margin-top: 0vh;
+          border-radius: 0;
+          width: 100%;
+          padding: 80px 20px 20px;
+          box-shadow: none;
+          background-color: transparent;
+          background-image: url(wave\ footer.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          box-shadow: none;
+        }
+
+        .checklist i {
+          padding-left: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sectionOne">
+      <div class="secOne">
+        <div class="contentFirst">
+          <img class="logo" src="Luna Diam - Logo.png" alt="" />
+          <h3 class="title">Sample Title</h3>
+          <p class="secPara">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate,
+            exercitationem rem! Blanditiis, minima non. Architecto dolorem aut
+            amet voluptas cupiditate.
+          </p>
+        </div>
+      </div>
+
+      <div class="secTwo"></div>
+    </div>
+
+    <div class="sectionTwo">
+      <h3 class="text-center">Gallery</h3>
+
+      <div class="galleryDiv">
+        <div class="imageGallery" id="gOne"></div>
+
+        <div class="imageGallery" id="gTwo"></div>
+
+        <div class="imageGallery" id="gThree"></div>
+
+        <div class="imageGallery" id="gFour"></div>
+      </div>
+    </div>
+
+    <div class="sectionThree">
+      <h2 class="text-center">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit?
+        <br /><span style="color: #ed1c24"
+          >Repellat, non Lorem ipsum dolor sit amet.</span
+        >
+      </h2>
+      <div class="firstRow">
+        <div class="iconBox icoOne">
+          <div class="iconTitle">
+            <img class="icon" src="halloween.png" alt="" />
+            <h3 class="iconBoxTitle">Test Title 1</h3>
+          </div>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis
+            eum porro, dignissimos eveniet odio magni illum. Excepturi explicabo
+            odio odit commodi in quidem atque aliquid.
+          </p>
+        </div>
+
+        <div class="iconBox icoTwo">
+          <div class="iconTitle">
+            <img class="icon" src="halloween (1).png" alt="" />
+            <h3 class="iconBoxTitle">Test Title 1</h3>
+          </div>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis
+            eum porro, dignissimos eveniet odio magni illum. Excepturi explicabo
+            odio odit commodi in quidem atque aliquid.
+          </p>
+        </div>
+
+        <div class="iconBox icoThree">
+          <div class="iconTitle">
+            <img class="icon" src="halloween (2).png" alt="" />
+            <h3 class="iconBoxTitle">Test Title 1</h3>
+          </div>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis
+            eum porro, dignissimos eveniet odio magni illum. Excepturi explicabo
+            odio odit commodi in quidem atque aliquid.
+          </p>
+        </div>
+      </div>
+
+      <div class="firstRow">
+        <div class="iconBox icoFour">
+          <div class="iconTitle">
+            <img class="icon" src="halloween (3).png" alt="" />
+            <h3 class="iconBoxTitle">Test Title 1</h3>
+          </div>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis
+            eum porro, dignissimos eveniet odio magni illum. Excepturi explicabo
+            odio odit commodi in quidem atque aliquid.
+          </p>
+        </div>
+
+        <div class="iconBox icoFive">
+          <div class="iconTitle">
+            <img class="icon" src="halloween (4).png" alt="" />
+            <h3 class="iconBoxTitle">Test Title 1</h3>
+          </div>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis
+            eum porro, dignissimos eveniet odio magni illum. Excepturi explicabo
+            odio odit commodi in quidem atque aliquid.
+          </p>
+        </div>
+      </div>
+
+      <div class="secThreeFooter">
+        <div class="footerContent">
+          <p class="checklist">
+            sample@sample.com :Mail
+            <i class="fas fa-envelope-open-text"></i>
+          </p>
+          <p class="checklist">
+            111 222 3333 :Phone
+            <i class="fas fa-phone"></i>
+          </p>
+          <p class="checklist">
+            2489 Davis Court, West Frankfort - Illinois :Location
+            <i class="fas fa-map-marker-alt"></i>
+          </p>
+          <p class="checklist">
+            www.sample.com - Illinois :Web
+            <i class="fas fa-globe"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
